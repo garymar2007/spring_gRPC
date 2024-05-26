@@ -27,6 +27,7 @@ public class GrpcClient {
                         .setFirstName("Gary")
                         .setLastName("Ma")
                         .build());
+        System.out.println("Response received from server: \n" + response.getGreeting());
         channel.shutdown();
     }
 }
