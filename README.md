@@ -60,6 +60,13 @@ Alternatively, you can use the `protobuf-maven-plugin` to generate the code.(in 
 3. Create the server application, implementing the generated service interfaces and spawning the gPRC server;
 4. Create the client application, making RPC calls using generated stubs.
 
+## Types of gRPC
+1. Unary RPC: The client sends a single request to the server and gets a single response back, just like a normal function call.
+2. Server streaming RPC: The client sends a request to the server and gets a stream to read a sequence of messages back. 
+The client reads from the returned stream until there are no more messages.
+3. Client streaming RPC: The client writes a sequence of messages and sends them to the server, again using a provided stream.
+4. Bidirectional streaming RPC: Both sides send a sequence of messages using a read-write stream.
+
 ### Relevant Articles:
 
 - [Introduction to gRPC](https://www.baeldung.com/grpc-introduction)
